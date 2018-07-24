@@ -6,7 +6,7 @@
   <link href="/lipapa.github.io/atom.xml" rel="self"/>
   
   <link href="https://lipapasma.github.io/lipapa.github.io/"/>
-  <updated>2018-07-24T10:53:48.538Z</updated>
+  <updated>2018-07-24T15:09:33.632Z</updated>
   <id>https://lipapasma.github.io/lipapa.github.io/</id>
   
   <author>
@@ -15,6 +15,32 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Js 基础</title>
+    <link href="https://lipapasma.github.io/lipapa.github.io/2018/07/24/JS%E5%9F%BA%E7%A1%80/"/>
+    <id>https://lipapasma.github.io/lipapa.github.io/2018/07/24/JS基础/</id>
+    <published>2018-07-24T12:53:16.623Z</published>
+    <updated>2018-07-24T15:09:33.632Z</updated>
+    
+    <content type="html"><![CDATA[<p>-核心(ECMAScript)<br>-文档对象模型 (DOM) Document object model(整合js,css,html)<br>-浏览器对象模型(BOM) Broswer object model (整合JS和浏览器)</p><p><img src="https://0214-1256944971.cos.ap-shanghai.myqcloud.com/images/JS%E7%BB%93%E6%9E%84.png?sign=q-sign-algorithm%3Dsha1%26q-ak%3DAKIDhLrlmsZu2BS9qbuH7T02mvHrM4ZLQXZi%26q-sign-time%3D1532444966%3B1532446766%26q-key-time%3D1532444966%3B1532446766%26q-header-list%3D%26q-url-param-list%3D%26q-signature%3D7874cfec1b29823637aee0d50adacdd11523883d&amp;token=bba318659135e08ad4024f97bfa112a80f1e680710001&amp;clientIP=114.221.99.55&amp;clientUA=316099ea-2517-40f5-9a33-9a0a1b0edea7" alt="JS基础图"><br>-简单的数.ECMAScript 描述以下内容:</p><pre><code>- 语法 类型 语句 关键字 保留字 运算符 对象   [      - 1 封装       - 2 继承      - 3 多态]</code></pre><p> <strong>数据类型</strong><br>  <img src="https://0214-1256944971.cos.ap-shanghai.myqcloud.com/images/%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B%E5%9B%BE.png?sign=q-sign-algorithm%3Dsha1%26q-ak%3DAKID6c6VyswU1JilakyJMNCK4e0SC5RlvdHy%26q-sign-time%3D1532444758%3B1532446558%26q-key-time%3D1532444758%3B1532446558%26q-header-list%3D%26q-url-param-list%3D%26q-signature%3Df75b88d3eea788d267aed321a65452b10f912a0b&amp;token=5d950fedc44b7910a6e89ec42ec1f6330ff0fb5910001&amp;clientIP=114.221.99.55&amp;clientUA=29940c93-d655-47f6-b58a-1b68d834834c" alt="数据类型图"></p><ul><li><p>基本数据类型   - Numeber —&gt; 数字类型 包括整型  浮点型  (整数和小数)</p><pre><code>- String  ---&gt; 字符串- Boolean ---&gt; 布尔型 ,ture/false- Undefined类型 --&gt; 该类型只有一个值,即undefined,当声明的变量未初始化时,该变量的默认值是undefined,当函数无明确返回值是,返回的也是undefined.- Null  ---&gt; 只有一个专用值 null ,用于表示尚未存在的对象,如果函数或者方法要返回的是对象,那么找不到该对象时,返回的通常是null.</code></pre><ul><li>引用数据类型 (复杂数据类型)    <pre><code>- 函数- 对象 - 数组</code></pre></li><li><p>类型查询函数 typeof  </p><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">typeof</span>(<span class="string">'test'</span>+<span class="number">3</span>)   &lt;!--  <span class="string">"string"</span>  --&gt;</span><br><span class="line"><span class="keyword">typeof</span>(<span class="literal">null</span>)       &lt;!--  <span class="string">"object"</span>  --&gt;</span><br><span class="line"><span class="keyword">typeof</span>(<span class="literal">true</span>+<span class="number">1</span>)     &lt;!--  <span class="string">"number"</span>  --&gt;</span><br><span class="line"><span class="keyword">typeof</span>(<span class="literal">true</span>-<span class="literal">false</span>) &lt;!--  <span class="string">"number"</span>  --&gt;</span><br></pre></td></tr></table></figure></li><li><p>运算符优先级</p></li></ul></li></ul>]]></content>
+    
+    <summary type="html">
+    
+      知识要点
+    
+    </summary>
+    
+      <category term="web" scheme="https://lipapasma.github.io/lipapa.github.io/categories/web/"/>
+    
+      <category term="JS基础" scheme="https://lipapasma.github.io/lipapa.github.io/categories/web/JS%E5%9F%BA%E7%A1%80/"/>
+    
+    
+      <category term="web" scheme="https://lipapasma.github.io/lipapa.github.io/tags/web/"/>
+    
+      <category term="JS" scheme="https://lipapasma.github.io/lipapa.github.io/tags/JS/"/>
+    
+  </entry>
   
   <entry>
     <title>原型是什么</title>
@@ -43,7 +69,7 @@
     <link href="https://lipapasma.github.io/lipapa.github.io/2018/07/23/hello-world/"/>
     <id>https://lipapasma.github.io/lipapa.github.io/2018/07/23/hello-world/</id>
     <published>2018-07-23T05:49:18.842Z</published>
-    <updated>2018-07-24T11:05:30.053Z</updated>
+    <updated>2018-07-24T13:02:02.924Z</updated>
     
     <summary type="html">
     
