@@ -6,7 +6,7 @@
   <link href="/lipapa.github.io/atom.xml" rel="self"/>
   
   <link href="https://lipapasma.github.io/lipapa.github.io/"/>
-  <updated>2018-07-23T15:34:50.395Z</updated>
+  <updated>2018-07-24T01:51:37.796Z</updated>
   <id>https://lipapasma.github.io/lipapa.github.io/</id>
   
   <author>
@@ -17,20 +17,36 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>Hello World</title>
-    <link href="https://lipapasma.github.io/lipapa.github.io/2018/07/23/hello-world/"/>
-    <id>https://lipapasma.github.io/lipapa.github.io/2018/07/23/hello-world/</id>
-    <published>2018-07-23T05:49:18.842Z</published>
-    <updated>2018-07-23T15:34:50.395Z</updated>
+    <title>原型是什么</title>
+    <link href="https://lipapasma.github.io/lipapa.github.io/2018/07/24/my-first-blog/"/>
+    <id>https://lipapasma.github.io/lipapa.github.io/2018/07/24/my-first-blog/</id>
+    <published>2018-07-24T00:44:32.346Z</published>
+    <updated>2018-07-24T01:51:37.796Z</updated>
     
-    <content type="html"><![CDATA[<p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p><h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p><h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><p>去去去<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure></p><p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p><h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p><h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="noopener">Deployment</a></p>]]></content>
+    <content type="html"><![CDATA[<p>date: 2018-07-24 08:44:32<br>categories: JS高级</p><p>description:  附加一段文章摘要，字数最好在140字以内，会出现在meta的description</p><p>在JavaScript中原型是一个prototype对象，用于表示类型之间的关系。<br> 原型链是针对构造函数的，比如我先创建了一个函数，然后通过一个变量new了这个函数，那么这个被new出来的函数就会继承创建出来的那个函数的属性，然后如果我访问new出来的这个函数的某个属性，但是我并没有在这个new出来的函数中定义这个变量，那么它就会往上（向创建出它的函数中）查找，这个查找的过程就叫做原型链。<br>Object ==&gt; 构造函数1 ==&gt; 构造函数2<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&lt;span style=&quot;font-size:14px;&quot;&gt;varPerson=function()&#123;this.age=&quot;匿名&quot;&#125;;</span><br><span class="line">varStudent=function()&#123;&#125;;</span><br><span class="line">//创建继承关系,prototype执行Person的一个实例对象</span><br><span class="line">Student.prototype=new  Person();&lt;/span&gt;</span><br></pre></td></tr></table></figure></p><p>原型API关系图<br><img src="https://images2015.cnblogs.com/blog/787416/201603/787416-20160323103557261-114570044.png" alt="image"></p><p><img src="https://images2015.cnblogs.com/blog/787416/201603/787416-20160322110905589-2039017350.png" alt="image"></p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">var A = function()&#123;&#125;;</span><br><span class="line">var a = new A();</span><br><span class="line">console.log(a.__proto__); //A &#123;&#125;（即构造器function A 的原型对象）</span><br><span class="line">console.log(a.__proto__.__proto__); //Object &#123;&#125;（即构造器function Object 的原型对象）</span><br><span class="line">console.log(a.__proto__.__proto__.__proto__); //null</span><br></pre></td></tr></table></figure>]]></content>
     
     <summary type="html">
     
       
       
-        &lt;p&gt;Welcome to &lt;a href=&quot;https://hexo.io/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;Hexo&lt;/a&gt;! This is your very first post. Check &lt;a href=&quot;https://hexo.
+        &lt;p&gt;date: 2018-07-24 08:44:32&lt;br&gt;categories: JS高级&lt;/p&gt;
+&lt;p&gt;description:  附加一段文章摘要，字数最好在140字以内，会出现在meta的description&lt;/p&gt;
+&lt;p&gt;在JavaScript中原型是一个prot
       
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
+    <title></title>
+    <link href="https://lipapasma.github.io/lipapa.github.io/2018/07/23/hello-world/"/>
+    <id>https://lipapasma.github.io/lipapa.github.io/2018/07/23/hello-world/</id>
+    <published>2018-07-23T05:49:18.842Z</published>
+    <updated>2018-07-24T00:57:33.948Z</updated>
+    
+    <summary type="html">
     
     </summary>
     

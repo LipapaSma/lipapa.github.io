@@ -84,14 +84,20 @@
 
 
 
+<meta name="description" content="date: 2018-07-24 08:44:32categories: JS高级 description:  附加一段文章摘要，字数最好在140字以内，会出现在meta的description 在JavaScript中原型是一个prototype对象，用于表示类型之间的关系。 原型链是针对构造函数的，比如我先创建了一个函数，然后通过一个变量new了这个函数，那么这个被new出来的函数就会继承创建">
 <meta property="og:type" content="article">
-<meta property="og:title" content="空心话">
-<meta property="og:url" content="https://lipapasma.github.io/lipapa.github.io/2018/07/23/hello-world/index.html">
+<meta property="og:title" content="原型是什么">
+<meta property="og:url" content="https://lipapasma.github.io/lipapa.github.io/2018/07/24/my-first-blog/index.html">
 <meta property="og:site_name" content="空心话">
+<meta property="og:description" content="date: 2018-07-24 08:44:32categories: JS高级 description:  附加一段文章摘要，字数最好在140字以内，会出现在meta的description 在JavaScript中原型是一个prototype对象，用于表示类型之间的关系。 原型链是针对构造函数的，比如我先创建了一个函数，然后通过一个变量new了这个函数，那么这个被new出来的函数就会继承创建">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-07-24T00:57:33.948Z">
+<meta property="og:image" content="https://images2015.cnblogs.com/blog/787416/201603/787416-20160323103557261-114570044.png">
+<meta property="og:image" content="https://images2015.cnblogs.com/blog/787416/201603/787416-20160322110905589-2039017350.png">
+<meta property="og:updated_time" content="2018-07-24T01:51:37.796Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="空心话">
+<meta name="twitter:title" content="原型是什么">
+<meta name="twitter:description" content="date: 2018-07-24 08:44:32categories: JS高级 description:  附加一段文章摘要，字数最好在140字以内，会出现在meta的description 在JavaScript中原型是一个prototype对象，用于表示类型之间的关系。 原型链是针对构造函数的，比如我先创建了一个函数，然后通过一个变量new了这个函数，那么这个被new出来的函数就会继承创建">
+<meta name="twitter:image" content="https://images2015.cnblogs.com/blog/787416/201603/787416-20160323103557261-114570044.png">
 
 
 
@@ -121,13 +127,13 @@
 
 
 
-  <link rel="canonical" href="https://lipapasma.github.io/lipapa.github.io/2018/07/23/hello-world/"/>
+  <link rel="canonical" href="https://lipapasma.github.io/lipapa.github.io/2018/07/24/my-first-blog/"/>
 
 
 
 
 
-  <title> | 空心话</title>
+  <title>原型是什么 | 空心话</title>
   
 <script>
   window.fbAsyncInit = function() {
@@ -302,7 +308,7 @@ undefined
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://lipapasma.github.io/lipapa.github.io/lipapa.github.io/2018/07/23/hello-world/">
+    <link itemprop="mainEntityOfPage" href="https://lipapasma.github.io/lipapa.github.io/lipapa.github.io/2018/07/24/my-first-blog/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Lipapa">
@@ -319,7 +325,7 @@ undefined
 
         
         
-          <h1 class="post-title" itemprop="name headline"></h1>
+          <h1 class="post-title" itemprop="name headline">原型是什么</h1>
         
 
         <div class="post-meta">
@@ -331,8 +337,8 @@ undefined
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-07-23T13:49:18+08:00">
-                2018-07-23
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-07-24T08:44:32+08:00">
+                2018-07-24
               </time>
             
             
@@ -375,7 +381,13 @@ undefined
       
 
       
-        
+        <p>date: 2018-07-24 08:44:32<br>categories: JS高级</p>
+<p>description:  附加一段文章摘要，字数最好在140字以内，会出现在meta的description</p>
+<p>在JavaScript中原型是一个prototype对象，用于表示类型之间的关系。<br> 原型链是针对构造函数的，比如我先创建了一个函数，然后通过一个变量new了这个函数，那么这个被new出来的函数就会继承创建出来的那个函数的属性，然后如果我访问new出来的这个函数的某个属性，但是我并没有在这个new出来的函数中定义这个变量，那么它就会往上（向创建出它的函数中）查找，这个查找的过程就叫做原型链。<br>Object ==&gt; 构造函数1 ==&gt; 构造函数2<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&lt;span style=&quot;font-size:14px;&quot;&gt;varPerson=function()&#123;this.age=&quot;匿名&quot;&#125;;</span><br><span class="line">varStudent=function()&#123;&#125;;</span><br><span class="line">//创建继承关系,prototype执行Person的一个实例对象</span><br><span class="line">Student.prototype=new  Person();&lt;/span&gt;</span><br></pre></td></tr></table></figure></p>
+<p>原型API关系图<br><img src="https://images2015.cnblogs.com/blog/787416/201603/787416-20160323103557261-114570044.png" alt="image"></p>
+<p><img src="https://images2015.cnblogs.com/blog/787416/201603/787416-20160322110905589-2039017350.png" alt="image"></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">var A = function()&#123;&#125;;</span><br><span class="line">var a = new A();</span><br><span class="line">console.log(a.__proto__); //A &#123;&#125;（即构造器function A 的原型对象）</span><br><span class="line">console.log(a.__proto__.__proto__); //Object &#123;&#125;（即构造器function Object 的原型对象）</span><br><span class="line">console.log(a.__proto__.__proto__.__proto__); //null</span><br></pre></td></tr></table></figure>
+
       
     </div>
     
@@ -408,15 +420,15 @@ undefined
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
+              <a href="/lipapa.github.io/2018/07/23/hello-world/" rel="next" title="">
+                <i class="fa fa-chevron-left"></i> 
+              </a>
+            
           </div>
 
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/lipapa.github.io/2018/07/24/my-first-blog/" rel="prev" title="原型是什么">
-                原型是什么 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
