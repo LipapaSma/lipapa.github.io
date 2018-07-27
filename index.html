@@ -359,6 +359,207 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://lipapasma.github.io/lipapa.github.io/lipapa.github.io/2018/07/27/Dom-对象/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Lipapa">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/lipapa.github.io/upload/images/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="空心话">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/lipapa.github.io/2018/07/27/Dom-对象/" itemprop="url">Dom 对象</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-07-27T08:38:49+08:00">
+                2018-07-27
+              </time>
+            
+            
+
+
+          
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/lipapa.github.io/categories/Dom/" itemprop="url" rel="index">
+                    <span itemprop="name">Dom</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+             <span id="/lipapa.github.io/2018/07/27/Dom-对象/" class="leancloud_visitors" data-flag-title="Dom 对象">
+               <span class="post-meta-divider">|</span>
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               
+                 <span class="post-meta-item-text">阅读次数&#58;</span>
+               
+                 <span class="leancloud-visitors-count"></span>
+             </span>
+          
+
+          
+
+          
+            <div class="post-wordcount">
+              
+                
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">字数统计&#58;</span>
+                
+                <span title="字数统计">
+                   字
+                </span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
+                
+                <span title="阅读时长">
+                   分钟
+                </span>
+              
+            </div>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p> <strong>Dom 对象关系:</strong><br>  <img src="https://images2018.cnblogs.com/blog/1364550/201807/1364550-20180726192702227-1138070441.png" alt="dom结构"><br> <strong>节点自身属性</strong><br>  -attributes  —&gt;  节点(元素)的属性节点<br>  -nodeType    —&gt;  节点类型<br>  -nodeValue   —&gt;  节点值<br>  -innerHTML   —&gt;  节点<br> <strong>导航属性</strong><br>  -parentNOde  —&gt; 节点元素的父节点<br>  -firstChild  —&gt; 节点下第一个子元素<br>  -lastChild   —&gt; 节点下最后一个子元素<br>  -childNodes  —&gt; 节点元素的子节点<br>  <figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">  <span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">"div1"</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">"div2"</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">p</span>&gt;</span>hello yuan<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">script</span>&gt;</span><span class="undefined"> </span></span><br><span class="line"><span class="undefined">    var div=document.getElementById("div2");</span></span><br><span class="line"><span class="undefined"></span></span><br><span class="line"><span class="undefined">    console.log(div.nextSibling.nodeName);  //思考:为什么不是P?</span></span><br><span class="line"><span class="undefined"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br></pre></td></tr></table></figure></p>
+<p>  <strong>节点数中的节点彼此拥有的层级关系</strong><br>  -父(parent),子(child)和同胞(sibling)等术语用于扫描这些关系.父节点用于子节点,同级的子节点被称为同胞(兄弟)<br>  -在节点数中,顶端节点被称为根(root)<br>  -每个节点都有父节点,除了根(他没有父节点)<br>  -一个节点可拥有任意数量的子<br>  -同胞是拥有相同父节点的节点<br>  <img src="http://images2015.cnblogs.com/blog/1020990/201707/1020990-20170724202913606-469266009.png" alt="节点图"><br>  页面查找:<br><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">通过 getElementById() 方法</span><br><span class="line">通过 getElementsByTagName() 方法</span><br><span class="line">通过使用 getElementsByClassName() 方法 </span><br><span class="line">通过使用 getElementsByName() 方法</span><br></pre></td></tr></table></figure></p>
+<hr>
+<p>onload:<br>这个属性的触发 标志着页面内容被加载完成.<br>应用场景:当有些事情我们希望页面加载完立刻执行,可以使用该事件属性<br>onsubmit:<br>当表单在提交时触发.该属性也只能给form元素使用.<br>应用场景:在表单提交前验证用户输入是否正确.如果验证失败,在该方法中我们应该阻止表单的提交.<br>Event 对象<br>代表事件的状态,比如事件在其中发生的元素、键盘按键的状态、鼠标的位置、鼠标按钮的状态。</p>
+<p>事件通常与函数结合使用，函数不会在事件发生前被执行！event对象在事件发生时系统已经创建好了,并且会在事件函数被调用时传给事件函数.我们获得仅仅需要接收一下即可.</p>
+<h2 id="增删改查"><a href="#增删改查" class="headerlink" title="增删改查"></a>增删改查</h2><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">**增加**</span><br><span class="line">createElement(name) 创建元素</span><br><span class="line">appendChild()  将元素追加</span><br><span class="line">**删除**</span><br><span class="line"><span class="number">1</span> 获得要删除的元素</span><br><span class="line"><span class="number">2</span> 获得他的父元素</span><br><span class="line"><span class="number">3</span> 使用removeChild () 方法删除</span><br></pre></td></tr></table></figure>
+<p><strong>改</strong></p>
+<p>1 使用上面的增和删结合完成修改<br>2  第二种  使用 setAttribute() 方法修改属性<br>使用innerHTML 属性修改元素内容</p>
+
+          
+        
+      
+    </div>
+    
+    
+    
+    <div>
+  
+</div>
+<!-- 添加的版权信息 -->
+<div>
+      
+</div>
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="https://lipapasma.github.io/lipapa.github.io/lipapa.github.io/2018/07/24/JS基础/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -1026,7 +1227,7 @@
               
                 <a href="/lipapa.github.io/archives/">
               
-                  <span class="site-state-item-count">3</span>
+                  <span class="site-state-item-count">4</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -1037,7 +1238,7 @@
               
               <div class="site-state-item site-state-categories">
                 
-                  <span class="site-state-item-count">5</span>
+                  <span class="site-state-item-count">6</span>
                   <span class="site-state-item-name">分类</span>
                 
               </div>
@@ -1048,7 +1249,7 @@
               
               <div class="site-state-item site-state-tags">
                 <a href="/lipapa.github.io/tags/index.html">
-                  <span class="site-state-item-count">5</span>
+                  <span class="site-state-item-count">6</span>
                   <span class="site-state-item-name">标签</span>
                 </a>
               </div>

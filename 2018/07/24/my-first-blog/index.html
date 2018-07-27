@@ -509,7 +509,7 @@
 
       
         <p><iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width="330" height="86" src="http://music.163.com/outchain/player?type=2&id=25706282&auto=0&height=66"><br></iframe><br>在JavaScript中原型是一个prototype对象，用于表示类型之间的关系。<br> 原型链是针对构造函数的，比如我先创建了一个函数，然后通过一个变量new了这个函数，那么这个被new出来的函数就会继承创建出来的那个函数的属性，然后如果我访问new出来的这个函数的某个属性，但是我并没有在这个new出来的函数中定义这个变量，那么它就会往上（向创建出它的函数中）查找，这个查找的过程就叫做原型链。</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">Object</span> ==&gt; 构造函数<span class="number">1</span> ==&gt; 构造函数<span class="number">2</span></span><br><span class="line">&lt;span style=<span class="string">"font-size:14px;"</span>&gt;varPerson=<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;<span class="keyword">this</span>.age=<span class="string">"匿名"</span>&#125;;</span><br><span class="line">varStudent=<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;&#125;;</span><br><span class="line"><span class="comment">//创建继承关系,prototype执行Person的一个实例对象</span></span><br><span class="line">Student.prototype=<span class="keyword">new</span>  Person();&lt;/span&gt;</span><br></pre></td></tr></table></figure>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">Object</span> ==&gt; 构造函数<span class="number">1</span> ==&gt; 构造函数<span class="number">2</span></span><br><span class="line">&lt;span style=<span class="string">"font-size:14px;"</span>&gt;varPerson=<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;<span class="keyword">this</span>.age=<span class="string">"匿名"</span>&#125;;</span><br><span class="line">varStudent=<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;&#125;;</span><br><span class="line"><span class="comment">//创建继承关系,prototype执行Person的一个实例对象</span></span><br><span class="line">Student.prototype=<span class="keyword">new</span>  Person();<span class="xml"><span class="tag">&lt;/<span class="name">span</span>&gt;</span></span></span><br></pre></td></tr></table></figure>
 <p>原型API关系图<br><img src="http://images2015.cnblogs.com/blog/341820/201606/341820-20160610194715371-759828586.png" alt="原型图"><br><img src="https://timgsa.baidu.com/timg?image&amp;quality=80&amp;size=b9999_10000&amp;sec=1532438261291&amp;di=e8d0c0383aea37427b26691f124b1240&amp;imgtype=0&amp;src=http%3A%2F%2Fpic2.zhimg.com%2Fv2-7208c58973fa469891e6be970df3ff54_b.jpg" alt="原型图"><br><img src="https://www.newasp.net/attachment/article/2013-3/20133513150105.jpg" alt="原型继承"></p>
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> A = <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;&#125;;</span><br><span class="line"><span class="keyword">var</span> a = <span class="keyword">new</span> A();</span><br><span class="line"><span class="built_in">console</span>.log(a.__proto__); <span class="comment">//A &#123;&#125;（即构造器function A 的原型对象）</span></span><br><span class="line"><span class="built_in">console</span>.log(a.__proto__.__proto__); <span class="comment">//Object &#123;&#125;（即构造器function Object 的原型对象）</span></span><br><span class="line"><span class="built_in">console</span>.log(a.__proto__.__proto__.__proto__); <span class="comment">//null</span></span><br></pre></td></tr></table></figure>
 
@@ -666,7 +666,7 @@
               
                 <a href="/lipapa.github.io/archives/">
               
-                  <span class="site-state-item-count">3</span>
+                  <span class="site-state-item-count">4</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -677,7 +677,7 @@
               
               <div class="site-state-item site-state-categories">
                 
-                  <span class="site-state-item-count">5</span>
+                  <span class="site-state-item-count">6</span>
                   <span class="site-state-item-name">分类</span>
                 
               </div>
@@ -688,7 +688,7 @@
               
               <div class="site-state-item site-state-tags">
                 <a href="/lipapa.github.io/tags/index.html">
-                  <span class="site-state-item-count">5</span>
+                  <span class="site-state-item-count">6</span>
                   <span class="site-state-item-name">标签</span>
                 </a>
               </div>
