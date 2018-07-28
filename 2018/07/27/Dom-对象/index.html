@@ -136,20 +136,20 @@
 
 
 
-<meta name="description" content="Dom 对象关系:   节点自身属性  -attributes  —&amp;gt;  节点(元素)的属性节点  -nodeType    —&amp;gt;  节点类型  -nodeValue   —&amp;gt;  节点值  -innerHTML   —&amp;gt;  节点 导航属性  -parentNOde  —&amp;gt; 节点元素的父节点  -firstChild  —&amp;gt; 节点下第一个子元素  -lastCh">
+<meta name="description" content="整理">
 <meta name="keywords" content="JS  Dom">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Dom 对象">
 <meta property="og:url" content="https://lipapasma.github.io/lipapa.github.io/2018/07/27/Dom-对象/index.html">
 <meta property="og:site_name" content="空心话">
-<meta property="og:description" content="Dom 对象关系:   节点自身属性  -attributes  —&amp;gt;  节点(元素)的属性节点  -nodeType    —&amp;gt;  节点类型  -nodeValue   —&amp;gt;  节点值  -innerHTML   —&amp;gt;  节点 导航属性  -parentNOde  —&amp;gt; 节点元素的父节点  -firstChild  —&amp;gt; 节点下第一个子元素  -lastCh">
+<meta property="og:description" content="整理">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="https://images2018.cnblogs.com/blog/1364550/201807/1364550-20180726192702227-1138070441.png">
 <meta property="og:image" content="http://images2015.cnblogs.com/blog/1020990/201707/1020990-20170724202913606-469266009.png">
-<meta property="og:updated_time" content="2018-07-27T06:16:04.688Z">
+<meta property="og:updated_time" content="2018-07-27T12:05:10.369Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Dom 对象">
-<meta name="twitter:description" content="Dom 对象关系:   节点自身属性  -attributes  —&amp;gt;  节点(元素)的属性节点  -nodeType    —&amp;gt;  节点类型  -nodeValue   —&amp;gt;  节点值  -innerHTML   —&amp;gt;  节点 导航属性  -parentNOde  —&amp;gt; 节点元素的父节点  -firstChild  —&amp;gt; 节点下第一个子元素  -lastCh">
+<meta name="twitter:description" content="整理">
 <meta name="twitter:image" content="https://images2018.cnblogs.com/blog/1364550/201807/1364550-20180726192702227-1138070441.png">
 
 
@@ -214,6 +214,7 @@
 
 
 
+  
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -489,6 +490,10 @@
           
 
           
+              <div class="post-description">
+                  整理
+              </div>
+          
 
         </div>
       </header>
@@ -503,8 +508,10 @@
       
 
       
-        <p> <strong>Dom 对象关系:</strong><br>  <img src="https://images2018.cnblogs.com/blog/1364550/201807/1364550-20180726192702227-1138070441.png" alt="dom结构"><br> <strong>节点自身属性</strong><br>  -attributes  —&gt;  节点(元素)的属性节点<br>  -nodeType    —&gt;  节点类型<br>  -nodeValue   —&gt;  节点值<br>  -innerHTML   —&gt;  节点<br> <strong>导航属性</strong><br>  -parentNOde  —&gt; 节点元素的父节点<br>  -firstChild  —&gt; 节点下第一个子元素<br>  -lastChild   —&gt; 节点下最后一个子元素<br>  -childNodes  —&gt; 节点元素的子节点<br>  <figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">  <span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">"div1"</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">"div2"</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">p</span>&gt;</span>hello yuan<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">script</span>&gt;</span><span class="undefined"> </span></span><br><span class="line"><span class="undefined">    var div=document.getElementById("div2");</span></span><br><span class="line"><span class="undefined"></span></span><br><span class="line"><span class="undefined">    console.log(div.nextSibling.nodeName);  //思考:为什么不是P?</span></span><br><span class="line"><span class="undefined"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br></pre></td></tr></table></figure></p>
-<p>  <strong>节点数中的节点彼此拥有的层级关系</strong><br>  -父(parent),子(child)和同胞(sibling)等术语用于扫描这些关系.父节点用于子节点,同级的子节点被称为同胞(兄弟)<br>  -在节点数中,顶端节点被称为根(root)<br>  -每个节点都有父节点,除了根(他没有父节点)<br>  -一个节点可拥有任意数量的子<br>  -同胞是拥有相同父节点的节点<br>  <img src="http://images2015.cnblogs.com/blog/1020990/201707/1020990-20170724202913606-469266009.png" alt="节点图"><br>  页面查找:<br><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">通过 getElementById() 方法</span><br><span class="line">通过 getElementsByTagName() 方法</span><br><span class="line">通过使用 getElementsByClassName() 方法 </span><br><span class="line">通过使用 getElementsByName() 方法</span><br></pre></td></tr></table></figure></p>
+        <h2 id="Dom-对象关系"><a href="#Dom-对象关系" class="headerlink" title="Dom 对象关系:"></a>Dom 对象关系:</h2><p>  <img src="https://images2018.cnblogs.com/blog/1364550/201807/1364550-20180726192702227-1138070441.png" alt="dom结构"></p>
+<h2 id="节点自身属性"><a href="#节点自身属性" class="headerlink" title="节点自身属性"></a>节点自身属性</h2><p>  -attributes  —&gt;  节点(元素)的属性节点<br>  -nodeType    —&gt;  节点类型<br>  -nodeValue   —&gt;  节点值<br>  -innerHTML   —&gt;  节点</p>
+<h2 id="导航属性"><a href="#导航属性" class="headerlink" title="导航属性"></a>导航属性</h2><p>  -parentNOde  —&gt; 节点元素的父节点<br>  -firstChild  —&gt; 节点下第一个子元素<br>  -lastChild   —&gt; 节点下最后一个子元素<br>  -childNodes  —&gt; 节点元素的子节点<br>  <figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">  <span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">"div1"</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">"div2"</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">p</span>&gt;</span>hello yuan<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">script</span>&gt;</span><span class="undefined"> </span></span><br><span class="line"><span class="undefined">    var div=document.getElementById("div2");</span></span><br><span class="line"><span class="undefined"></span></span><br><span class="line"><span class="undefined">    console.log(div.nextSibling.nodeName);  //思考:为什么不是P?</span></span><br><span class="line"><span class="undefined"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br></pre></td></tr></table></figure></p>
+<h2 id="节点数中的节点彼此拥有的层级关系"><a href="#节点数中的节点彼此拥有的层级关系" class="headerlink" title="节点数中的节点彼此拥有的层级关系"></a>节点数中的节点彼此拥有的层级关系</h2><p>  -父(parent),子(child)和同胞(sibling)等术语用于扫描这些关系.父节点用于子节点,同级的子节点被称为同胞(兄弟)<br>  -在节点数中,顶端节点被称为根(root)<br>  -每个节点都有父节点,除了根(他没有父节点)<br>  -一个节点可拥有任意数量的子<br>  -同胞是拥有相同父节点的节点<br>  <img src="http://images2015.cnblogs.com/blog/1020990/201707/1020990-20170724202913606-469266009.png" alt="节点图"><br>  页面查找:<br><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">通过 getElementById() 方法</span><br><span class="line">通过 getElementsByTagName() 方法</span><br><span class="line">通过使用 getElementsByClassName() 方法 </span><br><span class="line">通过使用 getElementsByName() 方法</span><br></pre></td></tr></table></figure></p>
 <hr>
 <p>onload:<br>这个属性的触发 标志着页面内容被加载完成.<br>应用场景:当有些事情我们希望页面加载完立刻执行,可以使用该事件属性<br>onsubmit:<br>当表单在提交时触发.该属性也只能给form元素使用.<br>应用场景:在表单提交前验证用户输入是否正确.如果验证失败,在该方法中我们应该阻止表单的提交.<br>Event 对象<br>代表事件的状态,比如事件在其中发生的元素、键盘按键的状态、鼠标的位置、鼠标按钮的状态。</p>
 <p>事件通常与函数结合使用，函数不会在事件发生前被执行！event对象在事件发生时系统已经创建好了,并且会在事件函数被调用时传给事件函数.我们获得仅仅需要接收一下即可.</p>
@@ -530,35 +537,6 @@
 <div>
       
         
-<div class="my_post_copyright">
-  <script src="//cdn.bootcss.com/clipboard.js/1.5.10/clipboard.min.js"></script>
-  
-  <!-- JS库 sweetalert 可修改路径 -->
-  <script src="https://cdn.bootcss.com/jquery/2.0.0/jquery.min.js"></script>
-  <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
-  <p><span>本文标题:</span><a href="/lipapa.github.io/2018/07/27/Dom-对象/">Dom 对象</a></p>
-  <p><span>文章作者:</span><a href="/" title="访问 Lipapa 的个人博客">Lipapa</a></p>
-  <p><span>发布时间:</span>2018年07月27日 - 08:07</p>
-  <p><span>最后更新:</span>2018年07月27日 - 14:07</p>
-  <p><span>原始链接:</span><a href="/lipapa.github.io/2018/07/27/Dom-对象/" title="Dom 对象">https://lipapasma.github.io/lipapa.github.io/2018/07/27/Dom-对象/</a>
-    <span class="copy-path"  title="点击复制文章链接"><i class="fa fa-clipboard" data-clipboard-text="https://lipapasma.github.io/lipapa.github.io/2018/07/27/Dom-对象/"  aria-label="复制成功！"></i></span>
-  </p>
-  <p><span>许可协议:</span><i class="fa fa-creative-commons"></i> <a rel="license" href="https://creativecommons.org/licenses/by-nc-nd/4.0/" target="_blank" title="Attribution-NonCommercial-NoDerivatives 4.0 International (CC BY-NC-ND 4.0)">署名-非商业性使用-禁止演绎 4.0 国际</a> 转载请保留原文链接及作者。</p>  
-</div>
-<script> 
-    var clipboard = new Clipboard('.fa-clipboard');
-    $(".fa-clipboard").click(function(){
-      clipboard.on('success', function(){
-        swal({   
-          title: "",   
-          text: '复制成功',
-          icon: "success", 
-          showConfirmButton: true
-          });
-    });
-    });  
-</script>
-
 
 
       
@@ -614,6 +592,10 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
+            
+              <a href="/lipapa.github.io/2018/07/27/node-基础/" rel="prev" title="Node基础">
+                Node基础 <i class="fa fa-chevron-right"></i>
+              </a>
             
           </div>
         </div>
@@ -699,7 +681,7 @@
               
                 <a href="/lipapa.github.io/archives/">
               
-                  <span class="site-state-item-count">4</span>
+                  <span class="site-state-item-count">5</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -721,7 +703,7 @@
               
               <div class="site-state-item site-state-tags">
                 <a href="/lipapa.github.io/tags/index.html">
-                  <span class="site-state-item-count">6</span>
+                  <span class="site-state-item-count">7</span>
                   <span class="site-state-item-name">标签</span>
                 </a>
               </div>
@@ -821,7 +803,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#增删改查"><span class="nav-number">1.</span> <span class="nav-text">增删改查</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Dom-对象关系"><span class="nav-number">1.</span> <span class="nav-text">Dom 对象关系:</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#节点自身属性"><span class="nav-number">2.</span> <span class="nav-text">节点自身属性</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#导航属性"><span class="nav-number">3.</span> <span class="nav-text">导航属性</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#节点数中的节点彼此拥有的层级关系"><span class="nav-number">4.</span> <span class="nav-text">节点数中的节点彼此拥有的层级关系</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#增删改查"><span class="nav-number">5.</span> <span class="nav-text">增删改查</span></a></li></ol></div>
             
 
           </div>
