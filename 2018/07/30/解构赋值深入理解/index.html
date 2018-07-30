@@ -123,7 +123,7 @@
 
 
 
-  <meta name="keywords" content="Git,node," />
+  <meta name="keywords" content="es6  解构赋值," />
 
 
 
@@ -136,18 +136,18 @@
 
 
 
-<meta name="description" content="知识要点">
-<meta name="keywords" content="Git,node">
+<meta name="description" content="Es6">
+<meta name="keywords" content="es6  解构赋值">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Git">
-<meta property="og:url" content="https://lipapasma.github.io/lipapa.github.io/2018/07/23/hello-world/index.html">
+<meta property="og:title" content="解构赋值深入理解">
+<meta property="og:url" content="https://lipapasma.github.io/lipapa.github.io/2018/07/30/解构赋值深入理解/index.html">
 <meta property="og:site_name" content="空心话">
-<meta property="og:description" content="知识要点">
+<meta property="og:description" content="Es6">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-07-27T12:05:25.205Z">
+<meta property="og:updated_time" content="2018-07-30T11:57:35.157Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Git">
-<meta name="twitter:description" content="知识要点">
+<meta name="twitter:title" content="解构赋值深入理解">
+<meta name="twitter:description" content="Es6">
 
 
 
@@ -177,13 +177,13 @@
 
 
 
-  <link rel="canonical" href="https://lipapasma.github.io/lipapa.github.io/2018/07/23/hello-world/"/>
+  <link rel="canonical" href="https://lipapasma.github.io/lipapa.github.io/2018/07/30/解构赋值深入理解/"/>
 
 
 
 
 
-  <title>Git | 空心话</title>
+  <title>解构赋值深入理解 | 空心话</title>
   
 <script>
   window.fbAsyncInit = function() {
@@ -359,7 +359,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://lipapasma.github.io/lipapa.github.io/lipapa.github.io/2018/07/23/hello-world/">
+    <link itemprop="mainEntityOfPage" href="https://lipapasma.github.io/lipapa.github.io/lipapa.github.io/2018/07/30/解构赋值深入理解/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Lipapa">
@@ -376,7 +376,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">Git</h1>
+          <h1 class="post-title" itemprop="name headline">解构赋值深入理解</h1>
         
 
         <div class="post-meta">
@@ -388,8 +388,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-07-23T13:49:18+08:00">
-                2018-07-23
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-07-30T08:48:25+08:00">
+                2018-07-30
               </time>
             
             
@@ -405,39 +405,6 @@
           </span>
 
           
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/lipapa.github.io/categories/git/" itemprop="url" rel="index">
-                    <span itemprop="name">git</span>
-                  </a>
-                </span>
-
-                
-                
-                  ， 
-                
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/lipapa.github.io/categories/git/node/" itemprop="url" rel="index">
-                    <span itemprop="name">node</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
 
           
             
@@ -445,7 +412,7 @@
 
           
           
-             <span id="/lipapa.github.io/2018/07/23/hello-world/" class="leancloud_visitors" data-flag-title="Git">
+             <span id="/lipapa.github.io/2018/07/30/解构赋值深入理解/" class="leancloud_visitors" data-flag-title="解构赋值深入理解">
                <span class="post-meta-divider">|</span>
                <span class="post-meta-item-icon">
                  <i class="fa fa-eye"></i>
@@ -499,7 +466,7 @@
 
           
               <div class="post-description">
-                  知识要点
+                  Es6
               </div>
           
 
@@ -516,24 +483,19 @@
       
 
       
-        <ul>
-<li>安装完成后<br> 在命令行输入:</li>
-</ul>
-<ol>
-<li><code>$git config --global user.name</code> “自定用户名”</li>
-<li><code>t-config --gbobal user.email</code> “自定义邮箱”</li>
-<li>每个机器都需要必须自报家门: 你的名字 和你的Email</li>
-<li>git config 命令的 –global  用了这个参数，表示你这台机器上所有的Git仓库都会使用这个配置，当然也可以对某个仓库指定不同的用户名和Email地址。</li>
+        <h2 id="数组的解构赋值"><a href="#数组的解构赋值" class="headerlink" title="数组的解构赋值"></a>数组的解构赋值</h2><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"> <span class="function"><span class="keyword">function</span> <span class="title">fn</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">  <span class="keyword">return</span> (<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>)</span><br><span class="line">   &#125;</span><br><span class="line"> <span class="keyword">let</span> [a,b,c] =fn();</span><br><span class="line"> <span class="built_in">console</span>.log(a,b,c); <span class="comment">// 1  2  3</span></span><br><span class="line"> <span class="string">``</span><span class="string">`   </span></span><br><span class="line"><span class="string"> **嵌套多层** </span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">`</span><span class="string">``</span>javascript</span><br><span class="line"> <span class="keyword">let</span> [a,[b,[c]]] = [<span class="number">1</span>,[<span class="number">2</span>[<span class="number">3</span>]]]</span><br><span class="line"> <span class="built_in">console</span>.log(a)  <span class="comment">// 1</span></span><br></pre></td></tr></table></figure>
+<p><strong>解构不成功,但模式匹配了,相应值为undefined</strong><br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span>[a,b] =[<span class="number">1</span>]</span><br><span class="line">a<span class="comment">//  1</span></span><br><span class="line">b<span class="comment">// undefined</span></span><br></pre></td></tr></table></figure></p>
+<p><strong>使用<code>...</code>这个扩展运算符,匹配余下的所以值,形成一个数组(匹配不上则为[] )</strong><br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span>[a,...b] = [<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>]</span><br><span class="line">a <span class="comment">// 1</span></span><br><span class="line">b <span class="comment">// [2,3]</span></span><br><span class="line"><span class="keyword">let</span> [a,...b] = [<span class="number">1</span>]</span><br><span class="line">a <span class="comment">//1</span></span><br><span class="line">b  <span class="comment">//[]</span></span><br></pre></td></tr></table></figure></p>
+<p><strong>可设置默认值,当相应的值严格等于Undefined,默认值生效</strong><br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span>[a,b=[<span class="number">1</span>,<span class="number">2</span>]] = [<span class="number">1</span>]</span><br><span class="line"> a <span class="comment">//1</span></span><br><span class="line"> b  <span class="comment">// [2,3]</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">let</span> [a ,b =[<span class="number">2</span>,<span class="number">3</span>] ] =[<span class="number">1</span>,<span class="literal">undefined</span>];  <span class="literal">undefined</span> 未定义</span><br><span class="line">a  <span class="comment">// 1 </span></span><br><span class="line">b  <span class="comment">// [2,3]</span></span><br><span class="line"><span class="keyword">let</span> [a,b =[<span class="number">2</span>,<span class="number">3</span>]] = [<span class="number">1</span>,<span class="literal">null</span>]   默认值就为空</span><br><span class="line">a <span class="comment">// 1</span></span><br><span class="line">b <span class="comment">// null</span></span><br></pre></td></tr></table></figure></p>
+<p><strong>类似于数组,也可以设置默认值</strong><br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> &#123;<span class="attr">a</span>:b= <span class="number">2</span>&#125; =&#123;</span><br><span class="line">   a:<span class="number">1</span>     <span class="comment">// a 是键   b是值  默认是2  重新赋值为1  则b就是 1</span></span><br><span class="line"> &#125;</span><br><span class="line"> b  <span class="comment">//1</span></span><br><span class="line"><span class="string">``</span><span class="string">` </span></span><br><span class="line"><span class="string">**因为数组实际上也是对象** </span></span><br><span class="line"><span class="string">`</span><span class="string">``</span>javascript</span><br><span class="line"> <span class="keyword">let</span>&#123;<span class="attr">a</span>:one,<span class="attr">b</span>:two&#125; = [<span class="number">5</span>,<span class="number">6</span>]</span><br><span class="line"> 作为对象b 的值是  two  <span class="comment">//6</span></span><br><span class="line"><span class="string">``</span><span class="string">`   </span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">## 字符串解构赋值 ##</span></span><br><span class="line"><span class="string">`</span><span class="string">``</span>javascript</span><br><span class="line"> <span class="keyword">let</span> [a,b] = <span class="string">'str'</span></span><br><span class="line">   a  <span class="comment">// 's'</span></span><br><span class="line">   b <span class="comment">// 't' </span></span><br><span class="line"> <span class="keyword">let</span>&#123;<span class="number">0</span>:a,<span class="number">1</span>:b,<span class="attr">length</span>:len&#125;  = <span class="string">'str'</span></span><br><span class="line"> a  <span class="comment">// s</span></span><br><span class="line"> b  <span class="comment">// t</span></span><br><span class="line"> len  <span class="comment">// 3</span></span><br><span class="line"><span class="string">``</span><span class="string">`    </span></span><br><span class="line"><span class="string">**默认值 解构赋值允许指定默认值**</span></span><br><span class="line"><span class="string">`</span><span class="string">``</span>javascript</span><br><span class="line"> <span class="keyword">let</span>[a,b=<span class="string">'zz'</span>] = [<span class="string">'sss'</span>]</span><br><span class="line"> a  <span class="comment">// sss</span></span><br><span class="line"> b <span class="comment">// zz  </span></span><br><span class="line"> <span class="keyword">let</span> [a,b=<span class="string">'zz'</span>] = [<span class="string">'sss'</span>,<span class="literal">undefined</span>]</span><br><span class="line"> <span class="comment">//  b = zz </span></span><br><span class="line"> !注:<span class="number">1.</span>数组成员为<span class="literal">undefined</span>时，默认值仍会生效(因为在ES6内部使用严格相等运算符‘===‘，判断一个位置是否有值，所以当一个数组成员严格等于<span class="literal">undefined</span>,默认值才会生效)</span><br><span class="line">  <span class="number">2.</span> <span class="string">`如果一个数组成员是null,那么默认值不会生效 ,因为null 不严格等于undefined;`</span></span><br><span class="line"><span class="string">``</span><span class="string">`  </span></span><br><span class="line"><span class="string">## 函数参数的解构 ##</span></span><br><span class="line"><span class="string">`</span><span class="string">``</span>javascript</span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">fn</span>(<span class="params">&#123;x=<span class="number">1</span>,y=<span class="number">2</span>&#125; =&#123;&#125;</span>) </span>&#123;</span><br><span class="line">  <span class="keyword">return</span> [x.y]</span><br><span class="line">   &#125;</span><br><span class="line"> <span class="built_in">console</span>.log(move(&#123;<span class="attr">x</span>:<span class="number">3</span>,<span class="attr">y</span>:<span class="number">4</span>&#125;))  <span class="comment">//[3,4]</span></span><br></pre></td></tr></table></figure></p>
+<h2 id="let的特点"><a href="#let的特点" class="headerlink" title="let的特点"></a>let的特点</h2><ol>
+<li><strong>不能重复声明</strong> var重复声明会被覆盖,但let重复声明会报错;</li>
 </ol>
-<h2 id="创建版本库"><a href="#创建版本库" class="headerlink" title="创建版本库"></a>创建版本库</h2><p>###1. 第一步</p>
-<p>   <code>$ mkdir learngit</code><br>    <code>$ cd learngit</code><br>    <code>$ pwd</code><br>    pwd命令用于显示当前目录   代码仓库位于/user/michael/learngit</p>
-<p>###2.第二步<br>初始化一个Git仓库，使用git init命令。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$ git init </span><br><span class="line"></span><br><span class="line">Initalized emty Git repository in/user/michael/learngit/.git/</span><br></pre></td></tr></table></figure></p>
-<p>瞬间git 就把仓库建好了,而且告诉你是一个空仓库<br>如果你没看到.git目录 是因为这个目录是默认隐藏, 用ls –ah 命令可以看见</p>
-<p>###第三步，用命令git add告诉Git，把文件添加到仓库：<br>-先创建<br><code>$ touch readme.txt</code><br>-再 add  (将工作区文件提交到暂存区stage)<br><code>$ git add readme.txt</code><br>使用命令git add <file>，注意，可反复多次使用，添加多个文件；</file></p>
-<p>-提交文件<br><code>$ git commit -m &quot;提交的备注信息 便于查找&quot;</code><br>使用命令git commit -m <message>，完成。</message></p>
-<p>###第四步<br>-查看状态<br><code>$git status</code>  </p>
-<p>-查看提交历史<br><code>$git log</code></p>
-<h2 id="版本回退"><a href="#版本回退" class="headerlink" title="版本回退"></a>版本回退</h2><p>-首先查看提交历史  复制版本号<br>-再输入以下命令<br><code>git reset --hard 版本号</code></p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> a  = <span class="number">1</span>;</span><br><span class="line"><span class="keyword">var</span> a  = <span class="number">2</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">let</span> b =<span class="number">1</span>;</span><br><span class="line"><span class="keyword">let</span> b = <span class="number">2</span>   /uncaught syntaxError:Identifier <span class="string">'bb'</span> has already benn declared; 报错</span><br><span class="line"><span class="string">``</span><span class="string">`   </span></span><br><span class="line"><span class="string">1. **不存在变量提升** 以下做法会报错</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">`</span><span class="string">``</span>javascript</span><br><span class="line"><span class="built_in">console</span>.log(a) <span class="comment">// a is not defined </span></span><br><span class="line"><span class="built_in">console</span>.log(b)  <span class="comment">//undefined</span></span><br><span class="line"><span class="keyword">let</span> a = <span class="number">10</span>;</span><br><span class="line"><span class="keyword">var</span> b = <span class="number">20</span>;</span><br><span class="line"><span class="string">``</span><span class="string">`      </span></span><br><span class="line"><span class="string">1. **存在暂时性死区**  只要块级作用域内存在let的声明,它所声明的变量就'绑定'这个区域 不在受外部的影响</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">`</span><span class="string">``</span>javascript</span><br><span class="line"><span class="keyword">var</span> a = <span class="number">3</span>;</span><br><span class="line"><span class="keyword">if</span>(<span class="number">1</span>)  &#123;</span><br><span class="line">a = <span class="number">1</span>;  <span class="comment">// a is not defined </span></span><br><span class="line"><span class="keyword">let</span> a;   </span><br><span class="line">&#125; </span><br><span class="line"><span class="string">``</span><span class="string">` &lt;br&gt;</span></span><br><span class="line"><span class="string">2. **let与window对象脱钩**</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">`</span><span class="string">``</span>javascript</span><br><span class="line"><span class="keyword">var</span> a = <span class="number">1</span>;</span><br><span class="line"><span class="keyword">let</span> b = <span class="number">1</span>;</span><br><span class="line"><span class="built_in">console</span>.log(<span class="built_in">window</span>.a)</span><br><span class="line"><span class="built_in">console</span>.log(<span class="built_in">window</span>.b)</span><br></pre></td></tr></table></figure>
+<h2 id="const的常量声明"><a href="#const的常量声明" class="headerlink" title="const的常量声明"></a>const的常量声明</h2><p>1.<code>const</code>声明了一个只读的常量,常量,即值不可更改.<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> max =<span class="number">10</span> ;</span><br><span class="line">max = <span class="number">11</span>  <span class="comment">//Uncaught TypeError: Assignment to constant variable. 报错</span></span><br></pre></td></tr></table></figure></p>
+<p>1)<code>const</code>一旦声明变量,就必须立刻初始化,否则报错<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> MAX;  <span class="comment">// Uncaught SyntaxError: Missing initializer in const declaration 报错</span></span><br></pre></td></tr></table></figure></p>
+<p>2)<code>const</code>声明的引用类型<br><code>const</code>声明的引用类型,引用类型的地址不能更改,但其指向的值是可以的,如:</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> obj =  &#123; </span><br><span class="line">   a:<span class="number">10</span></span><br><span class="line">  &#125;;</span><br><span class="line"> obj.a = <span class="number">11</span> </span><br><span class="line">  <span class="built_in">console</span>.log(obj.a)   <span class="comment">// 11  </span></span><br><span class="line">** 也可以给<span class="keyword">const</span> 传递空对象 向空对象的内存地址中传值,不改变内存地址即可;**</span><br></pre></td></tr></table></figure>
 
       
     </div>
@@ -570,7 +532,7 @@
   </li>
   <li class="post-copyright-link">
     <strong>本文链接：</strong>
-    <a href="https://lipapasma.github.io/lipapa.github.io/2018/07/23/hello-world/" title="Git">https://lipapasma.github.io/lipapa.github.io/2018/07/23/hello-world/</a>
+    <a href="https://lipapasma.github.io/lipapa.github.io/2018/07/30/解构赋值深入理解/" title="解构赋值深入理解">https://lipapasma.github.io/lipapa.github.io/2018/07/30/解构赋值深入理解/</a>
   </li>
   <li class="post-copyright-license">
     <strong>版权声明： </strong>
@@ -586,9 +548,7 @@
       
         <div class="post-tags">
           
-            <a href="/lipapa.github.io/tags/Git/" rel="tag"><i class="fa fa-tag"></i>Git</a>
-          
-            <a href="/lipapa.github.io/tags/node/" rel="tag"><i class="fa fa-tag"></i>node</a>
+            <a href="/lipapa.github.io/tags/es6-解构赋值/" rel="tag"><i class="fa fa-tag"></i>es6  解构赋值</a>
           
         </div>
       
@@ -601,15 +561,15 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
+              <a href="/lipapa.github.io/2018/07/30/COMMONjs规范/" rel="next" title="CommonJs规范">
+                <i class="fa fa-chevron-left"></i> CommonJs规范
+              </a>
+            
           </div>
 
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/lipapa.github.io/2018/07/24/my-first-blog/" rel="prev" title="原型是什么">
-                原型是什么 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -817,7 +777,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#创建版本库"><span class="nav-number">1.</span> <span class="nav-text">创建版本库</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#版本回退"><span class="nav-number">2.</span> <span class="nav-text">版本回退</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#数组的解构赋值"><span class="nav-number">1.</span> <span class="nav-text">数组的解构赋值</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#let的特点"><span class="nav-number">2.</span> <span class="nav-text">let的特点</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#const的常量声明"><span class="nav-number">3.</span> <span class="nav-text">const的常量声明</span></a></li></ol></div>
             
 
           </div>
