@@ -144,7 +144,7 @@
 <meta property="og:site_name" content="空心话">
 <meta property="og:description" content="Vue基础">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-08-08T00:59:37.313Z">
+<meta property="og:updated_time" content="2018-08-08T06:04:21.383Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="vue入门">
 <meta name="twitter:description" content="Vue基础">
@@ -492,13 +492,9 @@
 <li><strong>v-text</strong><br>可以将一短文本渲染到指定元素中</li>
 </ol>
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">&lt;div id=<span class="string">'add'</span> v-text=<span class="string">'mod'</span>&gt;</span><br><span class="line"></span><br><span class="line">&lt;<span class="regexp">/div&gt;</span></span><br><span class="line"><span class="regexp"></span></span><br><span class="line"><span class="regexp"></span></span><br><span class="line"><span class="regexp"> new Vue (&#123;   </span></span><br><span class="line"><span class="regexp">    el: "#add"</span></span><br><span class="line"><span class="regexp">    data: &#123;</span></span><br><span class="line"><span class="regexp">          mod:"要渲染的文字"</span></span><br><span class="line"><span class="regexp">      &#125;</span></span><br><span class="line"><span class="regexp">    &#125;)</span></span><br><span class="line"><span class="regexp">  </span></span><br><span class="line"><span class="regexp">页面显示的就是  mod里面的字符串</span></span><br></pre></td></tr></table></figure>
-<p>1.<strong>v-html</strong> </p>
-<p>差值表达式和v-text会将数据解释为纯文本，而非 HTML 。<br>  为了输出真正的 HTML ，你需要使用 v-html 指令：</p>
+<h2 id="v-html"><a href="#v-html" class="headerlink" title="v-html"></a>v-html</h2><p>差值表达式和v-text会将数据解释为纯文本，而非 HTML 。<br>  为了输出真正的 HTML ，你需要使用 v-html 指令：</p>
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">   &lt;div v-html=<span class="string">'msg'</span>&gt;</span><br><span class="line">  </span><br><span class="line">   &lt;<span class="regexp">/div&gt;</span></span><br><span class="line"><span class="regexp"> </span></span><br><span class="line"><span class="regexp">   new Vue (&#123;</span></span><br><span class="line"><span class="regexp">     el:   </span></span><br><span class="line"><span class="regexp">     data: &#123;</span></span><br><span class="line"><span class="regexp">       msg:"&lt;h2&gt; 文字 &lt;/</span>h2&gt;<span class="string">"</span></span><br><span class="line"><span class="string">     &#125;</span></span><br><span class="line"><span class="string">   &#125;)</span></span><br><span class="line"><span class="string">//被插入的内容都会被当做 HTML,但是对于没有HTML标签的数据绑定时作用同v-text和&#123;&#123;&#125;&#125;</span></span><br></pre></td></tr></table></figure>
-<ol>
-<li><strong>v-bind</strong></li>
-</ol>
-<ul>
+<h2 id="v-bind"><a href="#v-bind" class="headerlink" title="v-bind"></a>v-bind</h2><ul>
 <li>作用:可以给html元素或者组件动态绑定一个或者朵儿特性 .例如动态绑定Style和Class</li>
 <li><p>例:</p>
 <p>v-bind: 可简写为 ‘:’<br>1.img的Src从imgSrc中取得 地址</p>
@@ -516,11 +512,10 @@
 <p> 6.变量加常量第二中写法<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;img  v-bind=<span class="string">"&#123;src:imgSrc+'?v=1.0'&#125;"</span>&gt;</span><br></pre></td></tr></table></figure></p>
 <p> 7.对象数组<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;div v-bind:style=<span class="string">"[styleObjectA, styleObjectB]"</span>&gt;styleObjectA, styleObjectB&lt;<span class="regexp">/div&gt;</span></span><br></pre></td></tr></table></figure></p>
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">new</span> Vue (&#123;</span><br><span class="line">   el:</span><br><span class="line">   data &#123;</span><br><span class="line">     classA: <span class="string">"A"</span>, <span class="comment">// 放类名</span></span><br><span class="line">     classB: <span class="string">"B"</span>,  / 类名</span><br><span class="line">     isRed:  <span class="literal">true</span>, <span class="comment">//布尔值</span></span><br><span class="line">     isB: <span class="literal">true</span></span><br><span class="line">     isC: <span class="literal">true</span>,</span><br><span class="line">     styleObjactA : &#123; <span class="attr">fontSize</span>:<span class="string">'20px'</span>&#125;,</span><br><span class="line">     styleObjactB : &#123; <span class="attr">fontSize</span>:<span class="string">'20px'</span>&#125;, <span class="comment">//放样式</span></span><br></pre></td></tr></table></figure>
-<p> 2.<strong>v-for</strong></p>
-<p><em>语法</em> :<br><br>item in Array <br><br>(item,index) in Array <br><br>value in obj<br><br>(val,key,index) in obj <br></p>
+<h2 id="v-for"><a href="#v-for" class="headerlink" title="v-for"></a>v-for</h2><p><em>语法</em> :<br><br>item in Array <br><br>(item,index) in Array <br><br>value in obj<br><br>(val,key,index) in obj <br></p>
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="number">1.</span> &lt;p v-<span class="keyword">for</span> =<span class="string">"item in obj"</span>&gt; </span><br><span class="line">  &#123;&#123; item.name&#125;&#125;</span><br><span class="line"> &lt;<span class="regexp">/p&gt;</span></span><br><span class="line"><span class="regexp"></span></span><br><span class="line"><span class="regexp">2.&lt;p v-for="(item,index) in obj" :key ="index"&gt;</span></span><br><span class="line"><span class="regexp">  &#123;&#123;item.name&#125;&#125;</span></span><br><span class="line"><span class="regexp">  &lt;/</span>P&gt;</span><br><span class="line">--------------------------------------------------</span><br><span class="line"><span class="number">3.</span>&lt;p v-<span class="keyword">for</span> =<span class="string">"vlaue in bos"</span>&gt;</span><br><span class="line">  &#123;&#123;value&#125;&#125;</span><br><span class="line">  &lt;<span class="regexp">/p&gt;</span></span><br><span class="line"><span class="regexp">4.&lt;p v-for="(val,key,index) in bos " &gt;****</span></span><br><span class="line"><span class="regexp">     &#123;&#123;index&#125;&#125; : &#123;&#123;key&#125;&#125; :&#123;&#123;val&#125;&#125;</span></span><br><span class="line"><span class="regexp">  &lt;/</span>p&gt;</span><br><span class="line"> </span><br><span class="line"> <span class="keyword">new</span> Vue (&#123;</span><br><span class="line">    el:</span><br><span class="line">     data : &#123;</span><br><span class="line">     obj :[ &#123;<span class="attr">name</span>:<span class="string">'xx'</span>&#125;</span><br><span class="line">            &#123;<span class="attr">name</span>:<span class="string">'zz'</span>&#125;</span><br><span class="line">           ],</span><br><span class="line">     bos &#123;</span><br><span class="line">       name:<span class="string">'dd" &#125;</span></span><br><span class="line"><span class="string">    &#125;)</span></span><br></pre></td></tr></table></figure>
 <p><strong>注意:</strong> <br><br>以下变化是不会触发更新:<br><br>1.通过索引给数组设置新的值<br><br>2.通过length改变数组长度<br><br><strong>解决</strong><br><br>1.Vue.set(arr,index,newVue)<br><br>2.arr.splice(index,1,newVue)<br></p>
-<h2 id="v-model"><a href="#v-model" class="headerlink" title="v-model ##"></a>v-model ##<br></h2><p>1.在表单控件上或则组件上创建双向绑定<br><br>2.v-model只能在如下元素中使用:<br><br> <code>input</code> <code>select</code> <code>textarea</code> <code>compeonents</code>(vue组件)<br></p>
+<h2 id="v-model"><a href="#v-model" class="headerlink" title="v-model"></a>v-model</h2><p>1.在表单控件上或则组件上创建双向绑定<br><br>2.v-model只能在如下元素中使用:<br><br> <code>input</code> <code>select</code> <code>textarea</code> <code>compeonents</code>(vue组件)<br></p>
 <h2 id="v-on"><a href="#v-on" class="headerlink" title="v-on"></a>v-on</h2><p>1 文档地址:<a href="https://cn.vuejs.org/v2/guide/events.html#键值修饰符" title="文档地址" target="_blank" rel="noopener">https://cn.vuejs.org/v2/guide/events.html#键值修饰符</a> <br><br>在监听键盘事件时，我们经常需要监测常见的键值。 Vue 允许为 v-on 在监听键盘事件时添加按键修饰符 (缩写 <code>@</code>) <br><br><code>.enter</code> <br><br><code>.tap</code>, <br><br><code>.delete</code> (捕获 “删除” 和 “退格” 键) <br><br><code>.esc</code> <br><br><code>.up  , .down , .left  , .right</code> <br></p>
 <p><strong>可以自定义按键名</strong> </p>
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//在Vue2.0版本中扩展一个f1的按键修饰符写法：</span></span><br><span class="line">Vue.config.keyCodes.f1 = <span class="number">112</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// 使用</span></span><br><span class="line">&lt;button @keyup.f1=<span class="string">"someFunc"</span>&gt;<span class="xml"><span class="tag">&lt;/<span class="name">button</span>&gt;</span></span></span><br></pre></td></tr></table></figure>
@@ -600,6 +595,10 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
+            
+              <a href="/lipapa.github.io/2018/08/08/vue-生命周期-钩子函数/" rel="prev" title="生命周期 钩子函数">
+                生命周期 钩子函数 <i class="fa fa-chevron-right"></i>
+              </a>
             
           </div>
         </div>
@@ -685,7 +684,7 @@
               
                 <a href="/lipapa.github.io/archives/">
               
-                  <span class="site-state-item-count">11</span>
+                  <span class="site-state-item-count">12</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -696,7 +695,7 @@
               
               <div class="site-state-item site-state-categories">
                 
-                  <span class="site-state-item-count">6</span>
+                  <span class="site-state-item-count">8</span>
                   <span class="site-state-item-name">分类</span>
                 
               </div>
@@ -707,7 +706,7 @@
               
               <div class="site-state-item site-state-tags">
                 <a href="/lipapa.github.io/tags/index.html">
-                  <span class="site-state-item-count">14</span>
+                  <span class="site-state-item-count">15</span>
                   <span class="site-state-item-name">标签</span>
                 </a>
               </div>
@@ -807,7 +806,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#什么是mvvm"><span class="nav-number">1.</span> <span class="nav-text">什么是mvvm</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Vue常用指令"><span class="nav-number">2.</span> <span class="nav-text">Vue常用指令</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#v-model"><span class="nav-number">3.</span> <span class="nav-text">v-model ##</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#v-on"><span class="nav-number">4.</span> <span class="nav-text">v-on</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#v-if-和-v-show"><span class="nav-number">5.</span> <span class="nav-text">v-if 和 v-show</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#v-cloak"><span class="nav-number">6.</span> <span class="nav-text">v-cloak</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#什么是mvvm"><span class="nav-number">1.</span> <span class="nav-text">什么是mvvm</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Vue常用指令"><span class="nav-number">2.</span> <span class="nav-text">Vue常用指令</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#v-html"><span class="nav-number">3.</span> <span class="nav-text">v-html</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#v-bind"><span class="nav-number">4.</span> <span class="nav-text">v-bind</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#v-for"><span class="nav-number">5.</span> <span class="nav-text">v-for</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#v-model"><span class="nav-number">6.</span> <span class="nav-text">v-model</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#v-on"><span class="nav-number">7.</span> <span class="nav-text">v-on</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#v-if-和-v-show"><span class="nav-number">8.</span> <span class="nav-text">v-if 和 v-show</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#v-cloak"><span class="nav-number">9.</span> <span class="nav-text">v-cloak</span></a></li></ol></div>
             
 
           </div>
