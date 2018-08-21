@@ -123,7 +123,7 @@
 
 
 
-  <meta name="keywords" content="commonJS,package.json," />
+  <meta name="keywords" content="web, javaScript,Vue" />
 
 
 
@@ -136,18 +136,17 @@
 
 
 
-<meta name="description" content="node Commonjs">
-<meta name="keywords" content="commonJS,package.json">
+<meta name="description" content="Vue  JavaScript HTML5 CSS3">
 <meta property="og:type" content="article">
-<meta property="og:title" content="CommonJs规范">
-<meta property="og:url" content="https://lipapasma.github.io/lipapa.github.io/2018/07/30/COMMONjs规范/index.html">
+<meta property="og:title" content="&#39;H5上拉加载下拉刷新原理&#39;">
+<meta property="og:url" content="https://lipapasma.github.io/lipapa.github.io/2018/08/21/H5上拉加载下拉刷新原理/index.html">
 <meta property="og:site_name" content="空心话">
-<meta property="og:description" content="node Commonjs">
+<meta property="og:description" content="Vue  JavaScript HTML5 CSS3">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-07-29T16:44:01.619Z">
+<meta property="og:updated_time" content="2018-08-21T12:52:27.838Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="CommonJs规范">
-<meta name="twitter:description" content="node Commonjs">
+<meta name="twitter:title" content="&#39;H5上拉加载下拉刷新原理&#39;">
+<meta name="twitter:description" content="Vue  JavaScript HTML5 CSS3">
 
 
 
@@ -177,13 +176,13 @@
 
 
 
-  <link rel="canonical" href="https://lipapasma.github.io/lipapa.github.io/2018/07/30/COMMONjs规范/"/>
+  <link rel="canonical" href="https://lipapasma.github.io/lipapa.github.io/2018/08/21/H5上拉加载下拉刷新原理/"/>
 
 
 
 
 
-  <title>CommonJs规范 | 空心话</title>
+  <title>'H5上拉加载下拉刷新原理' | 空心话</title>
   
 <script>
   window.fbAsyncInit = function() {
@@ -359,7 +358,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://lipapasma.github.io/lipapa.github.io/lipapa.github.io/2018/07/30/COMMONjs规范/">
+    <link itemprop="mainEntityOfPage" href="https://lipapasma.github.io/lipapa.github.io/lipapa.github.io/2018/08/21/H5上拉加载下拉刷新原理/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Lipapa">
@@ -376,7 +375,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">CommonJs规范</h1>
+          <h1 class="post-title" itemprop="name headline">'H5上拉加载下拉刷新原理'</h1>
         
 
         <div class="post-meta">
@@ -388,8 +387,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-07-30T00:20:45+08:00">
-                2018-07-30
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-08-21T20:52:27+08:00">
+                2018-08-21
               </time>
             
             
@@ -412,7 +411,7 @@
 
           
           
-             <span id="/lipapa.github.io/2018/07/30/COMMONjs规范/" class="leancloud_visitors" data-flag-title="CommonJs规范">
+             <span id="/lipapa.github.io/2018/08/21/H5上拉加载下拉刷新原理/" class="leancloud_visitors" data-flag-title="'H5上拉加载下拉刷新原理'">
                <span class="post-meta-divider">|</span>
                <span class="post-meta-item-icon">
                  <i class="fa fa-eye"></i>
@@ -465,10 +464,6 @@
           
 
           
-              <div class="post-description">
-                  node Commonjs
-              </div>
-          
 
         </div>
       </header>
@@ -483,44 +478,7 @@
       
 
       
-        <h2 id="commonJS-规范"><a href="#commonJS-规范" class="headerlink" title="commonJS 规范"></a>commonJS 规范</h2><ol>
-<li>什么是commonjs 规范? <br><br>commonjs 是为了实现Jacascript的模块化,而制定的一套规范</li>
-</ol>
-<ol start="2">
-<li>为什么Jacascript 需要模块化? <br><br>简化代码的结构,提升代码的效率,就是代码复用<br>可以让一个js 文件内的<em>方法</em> <em>函数</em> 单独来回引用!</li>
-<li>优缺点:<br>可维护性;灵活架构,焦点分离;<br>方便模块间组合,分解;多人协作互不干扰<br>根据commonJS规范,一个单独的文件就是一个模块,每一个模块都是一个单独的作用域,也就是在一个文件定义的变量(包括函数和类),都是私有的,对其他文件是不可见的!</li>
-<li>Commonjs规定,每个文件的对外接口是module.exports对象.这个对象的所有;<br>2.<code>module</code>对象:在每一个模块中,<code>module</code>对象代表该模块自身,<br><code>exports</code>属性:是<code>module</code>对象的一个属性,他向外提供接口;</li>
-</ol>
-<p>例:<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> x = <span class="number">5</span>;</span><br><span class="line"><span class="keyword">var</span>  add  = <span class="function"><span class="keyword">function</span> (<span class="params">a</span>) </span>&#123;</span><br><span class="line">ruturn a +x ;</span><br><span class="line">  &#125;</span><br><span class="line"> <span class="built_in">module</span>.exports.x  = x;</span><br><span class="line"> <span class="built_in">module</span>.exports.add = add;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">上面代码通过<span class="built_in">module</span>.exports对象,定义了对外接口,输出变量X 和函数add, <span class="built_in">module</span>.exports对象是可以被其他文件导入,起始就是文件内部和外部通信的桥梁;</span><br><span class="line">conts  a  = <span class="built_in">require</span>(<span class="string">'./xxx.js'</span>)</span><br><span class="line"><span class="built_in">console</span>.log(a.x) <span class="comment">//5</span></span><br><span class="line"><span class="built_in">console</span>.log(add(<span class="number">3</span>)) <span class="comment">//8</span></span><br></pre></td></tr></table></figure></p>
-<h2 id="Packages-包"><a href="#Packages-包" class="headerlink" title="Packages 包"></a>Packages 包</h2><ol>
-<li>包的目的就是基于commonJS规范实现的应用程序或类库;</li>
-<li>包可以看做是模块,代码和其他资源组合起来的形成的独立作用域;<br><strong>规范的包结构</strong></li>
-</ol>
-<ol>
-<li><code>package.json</code>必须在包的顶层目录下;</li>
-<li><code>package.json</code>文件必须符合json格式,并且必须包含如下三个属性<br><br></li>
-</ol>
-<ul>
-<li><code>name</code>:包的名字  名称必须唯一</li>
-<li><code>version</code>:包的版本号  </li>
-<li><code>main</code>:表示包的入口文件</li>
-</ul>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">- +bin   二进制文件在Bin目录下</span><br><span class="line">- +lib   Javascript 在lib目录下</span><br><span class="line">- +doc  文档在doc目录下</span><br><span class="line">- +test 单元测试在test目录</span><br><span class="line">- +<span class="string">`package.json`</span>在顶层目录下</span><br></pre></td></tr></table></figure>
-<p><strong>包描述文件 package.json</strong></p>
-<ul>
-<li><code>name</code>: 名称必须唯一</li>
-<li><code>description</code>:包的简要说明</li>
-<li><code>version</code>:符合语义化版本识别规范的版本字符串</li>
-<li><code>keywords</code>:关键字数据.通常用于搜索</li>
-<li><code>maintainers</code>:维护者数组.每个元素要包含name,email,web可选字段</li>
-<li><code>contributors</code>:贡献者数组,格式和maintainers相同,包的作者应该是贡献者数据的第一个元素</li>
-<li><code>bugs</code>:提交bug的地址.可以是网址或电子邮件地址</li>
-<li><code>licenses</code>:许可证数组,每个元素要包含的type和url字段;</li>
-<li><code>repositories</code>:仓库托管地址数组,每个元素要包含type,Url和path字段;</li>
-<li><code>dependencies</code>:包的依赖,一个关联数组.由包名称和版本号组成</li>
-<li><code>devDepencies</code>:开发依赖项,表示一个包在开发期间用到的依赖项</li>
-</ul>
-
+        
       
     </div>
     
@@ -539,6 +497,35 @@
 <div>
       
         
+<div class="my_post_copyright">
+  <script src="//cdn.bootcss.com/clipboard.js/1.5.10/clipboard.min.js"></script>
+  
+  <!-- JS库 sweetalert 可修改路径 -->
+  <script src="https://cdn.bootcss.com/jquery/2.0.0/jquery.min.js"></script>
+  <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+  <p><span>本文标题:</span><a href="/lipapa.github.io/2018/08/21/H5上拉加载下拉刷新原理/">'H5上拉加载下拉刷新原理'</a></p>
+  <p><span>文章作者:</span><a href="/" title="访问 Lipapa 的个人博客">Lipapa</a></p>
+  <p><span>发布时间:</span>2018年08月21日 - 20:08</p>
+  <p><span>最后更新:</span>2018年08月21日 - 20:08</p>
+  <p><span>原始链接:</span><a href="/lipapa.github.io/2018/08/21/H5上拉加载下拉刷新原理/" title="'H5上拉加载下拉刷新原理'">https://lipapasma.github.io/lipapa.github.io/2018/08/21/H5上拉加载下拉刷新原理/</a>
+    <span class="copy-path"  title="点击复制文章链接"><i class="fa fa-clipboard" data-clipboard-text="https://lipapasma.github.io/lipapa.github.io/2018/08/21/H5上拉加载下拉刷新原理/"  aria-label="复制成功！"></i></span>
+  </p>
+  <p><span>许可协议:</span><i class="fa fa-creative-commons"></i> <a rel="license" href="https://creativecommons.org/licenses/by-nc-nd/4.0/" target="_blank" title="Attribution-NonCommercial-NoDerivatives 4.0 International (CC BY-NC-ND 4.0)">署名-非商业性使用-禁止演绎 4.0 国际</a> 转载请保留原文链接及作者。</p>  
+</div>
+<script> 
+    var clipboard = new Clipboard('.fa-clipboard');
+    $(".fa-clipboard").click(function(){
+      clipboard.on('success', function(){
+        swal({   
+          title: "",   
+          text: '复制成功',
+          icon: "success", 
+          showConfirmButton: true
+          });
+    });
+    });  
+</script>
+
 
 
       
@@ -556,7 +543,7 @@
   </li>
   <li class="post-copyright-link">
     <strong>本文链接：</strong>
-    <a href="https://lipapasma.github.io/lipapa.github.io/2018/07/30/COMMONjs规范/" title="CommonJs规范">https://lipapasma.github.io/lipapa.github.io/2018/07/30/COMMONjs规范/</a>
+    <a href="https://lipapasma.github.io/lipapa.github.io/2018/08/21/H5上拉加载下拉刷新原理/" title="'H5上拉加载下拉刷新原理'">https://lipapasma.github.io/lipapa.github.io/2018/08/21/H5上拉加载下拉刷新原理/</a>
   </li>
   <li class="post-copyright-license">
     <strong>版权声明： </strong>
@@ -570,14 +557,6 @@
 
     <footer class="post-footer">
       
-        <div class="post-tags">
-          
-            <a href="/lipapa.github.io/tags/commonJS/" rel="tag"><i class="fa fa-tag"></i>commonJS</a>
-          
-            <a href="/lipapa.github.io/tags/package-json/" rel="tag"><i class="fa fa-tag"></i>package.json</a>
-          
-        </div>
-      
 
       
       
@@ -587,8 +566,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/lipapa.github.io/2018/07/27/node-基础/" rel="next" title="Node基础">
-                <i class="fa fa-chevron-left"></i> Node基础
+              <a href="/lipapa.github.io/2018/08/19/前端性能优化/" rel="next" title="前端性能优化">
+                <i class="fa fa-chevron-left"></i> 前端性能优化
               </a>
             
           </div>
@@ -596,10 +575,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/lipapa.github.io/2018/07/30/解构赋值深入理解/" rel="prev" title="解构赋值深入理解">
-                解构赋值深入理解 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -656,17 +631,8 @@
       
 
       
-        <ul class="sidebar-nav motion-element">
-          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
-            文章目录
-          </li>
-          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
-            站点概览
-          </li>
-        </ul>
-      
 
-      <section class="site-overview-wrap sidebar-panel">
+      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -797,22 +763,6 @@
         </div>
       </section>
 
-      
-      <!--noindex-->
-        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
-          <div class="post-toc">
-
-            
-              
-            
-
-            
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#commonJS-规范"><span class="nav-number">1.</span> <span class="nav-text">commonJS 规范</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Packages-包"><span class="nav-number">2.</span> <span class="nav-text">Packages 包</span></a></li></ol></div>
-            
-
-          </div>
-        </section>
-      <!--/noindex-->
       
 
       

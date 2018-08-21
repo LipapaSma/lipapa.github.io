@@ -136,17 +136,17 @@
 
 
 
-<meta name="description" content="解决webp格式兼容性问题只有基于webkit内核的浏览器才支持，如果ie内核的浏览器打开，根本不会显示webp格式的图片 123456789101112131415161718function get_thumb($url, $type = &apos;&apos;, $width = 0, $height = 0, $format = &apos;webp&apos;)&amp;#123;    //oss图片    if(strpos($">
+<meta name="description" content="MVC 和MVVMMVC  能使网站程序物理结构更合理 使代码更容易维护 有利于代码复用M —&amp;gt; 模型  负责数据库操作 V —&amp;gt; 视图   负责调用 M(model)调取数据,再调用模板展示最终效果C —&amp;gt; 控制器  程序入口 决定调用哪个V(view) MVVM和MVC模式一样,主要目的是分离视图和模型,有以下优点:  低耦合   可重用性  独立开发  可测试  解决web">
 <meta property="og:type" content="article">
 <meta property="og:title" content="前端性能优化">
 <meta property="og:url" content="https://lipapasma.github.io/lipapa.github.io/2018/08/19/前端性能优化/index.html">
 <meta property="og:site_name" content="空心话">
-<meta property="og:description" content="解决webp格式兼容性问题只有基于webkit内核的浏览器才支持，如果ie内核的浏览器打开，根本不会显示webp格式的图片 123456789101112131415161718function get_thumb($url, $type = &apos;&apos;, $width = 0, $height = 0, $format = &apos;webp&apos;)&amp;#123;    //oss图片    if(strpos($">
+<meta property="og:description" content="MVC 和MVVMMVC  能使网站程序物理结构更合理 使代码更容易维护 有利于代码复用M —&amp;gt; 模型  负责数据库操作 V —&amp;gt; 视图   负责调用 M(model)调取数据,再调用模板展示最终效果C —&amp;gt; 控制器  程序入口 决定调用哪个V(view) MVVM和MVC模式一样,主要目的是分离视图和模型,有以下优点:  低耦合   可重用性  独立开发  可测试  解决web">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-08-19T12:36:34.271Z">
+<meta property="og:updated_time" content="2018-08-21T13:37:01.016Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="前端性能优化">
-<meta name="twitter:description" content="解决webp格式兼容性问题只有基于webkit内核的浏览器才支持，如果ie内核的浏览器打开，根本不会显示webp格式的图片 123456789101112131415161718function get_thumb($url, $type = &apos;&apos;, $width = 0, $height = 0, $format = &apos;webp&apos;)&amp;#123;    //oss图片    if(strpos($">
+<meta name="twitter:description" content="MVC 和MVVMMVC  能使网站程序物理结构更合理 使代码更容易维护 有利于代码复用M —&amp;gt; 模型  负责数据库操作 V —&amp;gt; 视图   负责调用 M(model)调取数据,再调用模板展示最终效果C —&amp;gt; 控制器  程序入口 决定调用哪个V(view) MVVM和MVC模式一样,主要目的是分离视图和模型,有以下优点:  低耦合   可重用性  独立开发  可测试  解决web">
 
 
 
@@ -478,7 +478,17 @@
       
 
       
-        <h2 id="解决webp格式兼容性问题"><a href="#解决webp格式兼容性问题" class="headerlink" title="解决webp格式兼容性问题"></a>解决webp格式兼容性问题</h2><p>只有基于webkit内核的浏览器才支持，如果ie内核的浏览器打开，根本不会显示webp格式的图片</p>
+        <h2 id="MVC-和MVVM"><a href="#MVC-和MVVM" class="headerlink" title="MVC 和MVVM"></a>MVC 和MVVM</h2><p><strong>MVC</strong></p>
+<ol>
+<li>能使网站程序物理结构更合理</li>
+<li>使代码更容易维护</li>
+<li>有利于代码复用<br>M —&gt; 模型  负责数据库操作 <br><br>V —&gt; 视图   负责调用 M(model)调取数据,再调用模板展示最终效果<br><br>C —&gt; 控制器  程序入口 决定调用哪个V(view) <br><br><strong>MVVM</strong><br>和MVC模式一样,主要目的是分离视图和模型,有以下优点: <br></li>
+<li>低耦合  <br></li>
+<li>可重用性 <br></li>
+<li>独立开发 <br></li>
+<li>可测试<br></li>
+</ol>
+<h2 id="解决webp格式兼容性问题"><a href="#解决webp格式兼容性问题" class="headerlink" title="解决webp格式兼容性问题"></a>解决webp格式兼容性问题</h2><p>只有基于webkit内核的浏览器才支持，如果ie内核的浏览器打开，根本不会显示webp格式的图片</p>
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">get_thumb</span>(<span class="params">$url, $type = <span class="string">''</span>, $width = <span class="number">0</span>, $height = <span class="number">0</span>, $format = <span class="string">'webp'</span></span>)</span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="comment">//oss图片</span></span><br><span class="line">    <span class="keyword">if</span>(strpos($url, <span class="string">'http://static.jutubao.com'</span>) !== <span class="literal">false</span> || strpos($url, <span class="string">'http://img.jutubao.com'</span>) !== <span class="literal">false</span>) &#123;</span><br><span class="line">        <span class="comment">//判断客户端是否支持webp，不支持则改为jpg格式</span></span><br><span class="line">        $accept = request()-&gt;header(<span class="string">'accept'</span>);</span><br><span class="line">        <span class="keyword">if</span>(strpos($accept, <span class="string">'image/webp'</span>) === <span class="literal">false</span> &amp;&amp; $format == <span class="string">'webp'</span>) &#123;</span><br><span class="line">            $format = <span class="string">'jpg'</span>;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">if</span>(empty($width) &amp;&amp; empty($height) &amp;&amp; empty($type)) &#123;   <span class="comment">//更改图片格式</span></span><br><span class="line">            $url .= <span class="string">'?x-oss-process=image/format,'</span>.$format;</span><br><span class="line">        &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">            $url .= <span class="string">'?x-oss-process=image/resize,m_'</span>.$type.<span class="string">',h_'</span>.$height.<span class="string">',w_'</span>.$width.<span class="string">'/format,'</span>.$format;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> $url;&#125;</span><br></pre></td></tr></table></figure>
       
     </div>
@@ -547,6 +557,10 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
+            
+              <a href="/lipapa.github.io/2018/08/21/H5上拉加载下拉刷新原理/" rel="prev" title="'H5上拉加载下拉刷新原理'">
+                'H5上拉加载下拉刷新原理' <i class="fa fa-chevron-right"></i>
+              </a>
             
           </div>
         </div>
@@ -632,7 +646,7 @@
               
                 <a href="/lipapa.github.io/archives/">
               
-                  <span class="site-state-item-count">14</span>
+                  <span class="site-state-item-count">15</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -754,7 +768,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#解决webp格式兼容性问题"><span class="nav-number">1.</span> <span class="nav-text">解决webp格式兼容性问题</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#MVC-和MVVM"><span class="nav-number">1.</span> <span class="nav-text">MVC 和MVVM</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#解决webp格式兼容性问题"><span class="nav-number">2.</span> <span class="nav-text">解决webp格式兼容性问题</span></a></li></ol></div>
             
 
           </div>
